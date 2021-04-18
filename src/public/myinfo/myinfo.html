@@ -1,0 +1,30 @@
+<div class="container">
+  
+  <div ng-if="myinfoCtrl.userData === undefined" id="user-data-guest-msg"> 
+    Not Signed Up Yet. Sign up Now!
+  </div>
+
+  <table id="userinfo-table" ng-if="myinfoCtrl.userData != undefined" class="table userinfo-table">
+    <tr>
+      <td>First name: </td>
+      <td>{{myinfoCtrl.userData.firstName}}</td>
+    </tr>
+    <tr>
+      <td>Last name: </td>
+      <td>{{myinfoCtrl.userData.lastName}}</td>
+    </tr>
+    <tr>
+      <td>Email: </td>
+      <td>{{myinfoCtrl.userData.email}}</td>
+    </tr>
+    <tr>
+      <td>Phone: </td>
+      <td>{{myinfoCtrl.userData.phone}}</td>
+    </tr>
+    <tr>
+      <td>Favourite Menu Item: </td>
+      <td><menu-item id="userinfo-menu-item" menu-item="myinfoCtrl.userData.favouriteMenuItem"></menu-item></td>
+    </tr>
+  </table>
+
+</div>
